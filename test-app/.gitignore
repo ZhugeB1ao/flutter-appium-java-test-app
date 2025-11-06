@@ -1,0 +1,12 @@
+# Flutter/Dart
+.dart_tool/
+.packages
+.pub-cache/
+build/
+.idea/
+.vscode/
+android/.gradle/
+**/GeneratedPluginRegistrant.*
+
+# macOS
+.DS_Store

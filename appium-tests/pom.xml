@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.example</groupId>
+    <artifactId>appium-tests</artifactId>
+    <version>0.1.0</version>
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- Appium Java client -->
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>8.6.0</version>
+        </dependency>
+
+        <!-- TestNG for tests -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.7.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Selenium (transitive from Appium, but explicit is okay) -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.10.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M8</version>
+                <configuration>
+                    <!-- Print test output directly to console so listener logs ([PASS]) are visible -->
+                    <useFile>false</useFile>
+                    <printSummary>true</printSummary>
+                    <includes>
+                        <!-- Run only TaskFlowTest to keep suite focused -->
+                        <include>com/example/tests/TaskFlowTest.java</include>
+                    </includes>
+                    <!-- Default system properties so tests can run with just `mvn test` -->
+                    <systemPropertyVariables>
+                        <!-- APK built by Flutter (relative to this module) -->
+                        <appPath>${project.basedir}/../test-app/build/app/outputs/flutter-apk/app-debug.apk</appPath>
+                        <!-- Local Appium server -->
+                        <appiumServer>http://127.0.0.1:4723</appiumServer>
+                        <!-- Default Android emulator -->
+                        <udid>emulator-5554</udid>
+                        <deviceName>emulator-5554</deviceName>
+                        <failIfNoTests>false</failIfNoTests>
+                    </systemPropertyVariables>
+                    <useSystemClassLoader>true</useSystemClassLoader>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

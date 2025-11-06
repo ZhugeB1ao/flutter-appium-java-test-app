@@ -1,0 +1,12 @@
+com/example/AppiumTest.class
+com/example/tests/TaskCompletionSuite.class
+com/example/tests/SettingsSuite.class
+com/example/tests/TaskCrudSuite.class
+com/example/pages/HomePage.class
+com/example/util/LoggingListener.class
+com/example/tests/CounterTest.class
+com/example/BaseTest.class
+com/example/tests/HomeOverviewSuite.class
+com/example/tests/TasksListSuite.class
+com/example/tests/TaskFlowTest.class
+com/example/tests/NavigationUiSuite.class

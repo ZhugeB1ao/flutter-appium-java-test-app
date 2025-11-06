@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Appium Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Android Task Flow Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.example.tests.TaskFlowTest">
+        <methods>
+          <include name="testAddTaskAndVerifyInList"/>
+          <include name="setUp"/>
+          <include name="testClearAllTasksViaSettings"/>
+          <include name="beforeEach"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.example.tests.TaskFlowTest -->
+    </classes>
+  </test> <!-- Android Task Flow Tests(failed) -->
+</suite> <!-- Failed suite [Appium Test Suite] -->
