@@ -37,53 +37,72 @@ public class DeleteTaskSuite extends BaseTest {
         
         WebElement el = waitForTextContains(title);
         swipeLeft(el);
-        Thread.sleep(300);
+        Thread.sleep(200);
         Assert.assertFalse(driver.getPageSource().contains("Xóa nhiệm vụ"));
     }
 
-    @Test(description = "Delete first task in list")
-    public void testDeleteFirstTask() throws InterruptedException {
-        String title = addTask("Delete First");
-        WebElement el = waitForTextContains(title);
-        swipeLeft(el);
-        Thread.sleep(300);
-        Assert.assertFalse(driver.getPageSource().contains(title));
+    @Test(description = "Delete oldest task when multiple exist")
+    public void testDeleteOldestTask() throws InterruptedException {
+        String title1 = addTask("Old Task 1");
+        String title2 = addTask("Old Task 2");
+        String title3 = addTask("Old Task 3");
+        
+		// Delete the first (oldest) task
+		WebElement el1 = waitForTextContains(title1);
+		swipeLeft(el1);
+		Thread.sleep(200);
+		Assert.assertFalse(driver.getPageSource().contains(title1));        // Verify other tasks still exist
+        Assert.assertTrue(driver.getPageSource().contains(title2));
+        Assert.assertTrue(driver.getPageSource().contains(title3));
     }
 
-    @Test(description = "Delete task immediately after creation")
-    public void testDeleteAfterCreation() throws InterruptedException {
-        String title = addTask("Delete Immediate");
-        WebElement el = waitForTextContains(title);
-        swipeLeft(el);
-        Thread.sleep(300);
-        Assert.assertFalse(driver.getPageSource().contains(title));
-    }
-
-    @Test(description = "Delete multiple tasks")
-    public void testDeleteMultipleTasks() throws InterruptedException {
-        String title1 = addTask("Delete Multi 1");
-        String title2 = addTask("Delete Multi 2");
+    @Test(description = "Delete middle task when three exist")
+    public void testDeleteMiddleTask() throws InterruptedException {
+        String title1 = addTask("First Task");
+        String title2 = addTask("Middle Task");
+        String title3 = addTask("Last Task");
         
-        // Delete first task
-        WebElement el1 = waitForTextContains(title1);
-        swipeLeft(el1);
-        Thread.sleep(300);
-        Assert.assertFalse(driver.getPageSource().contains(title1));
-        
-        // Delete second task
+        // Delete the middle task
         WebElement el2 = waitForTextContains(title2);
         swipeLeft(el2);
-        Thread.sleep(300);
+        Thread.sleep(200);
         Assert.assertFalse(driver.getPageSource().contains(title2));
+        
+        // Verify first and last tasks still exist
+        Assert.assertTrue(driver.getPageSource().contains(title1));
+        Assert.assertTrue(driver.getPageSource().contains(title3));
     }
 
-    @Test(description = "Delete task with simple title")
-    public void testDeleteSimpleTask() throws InterruptedException {
-        String title = addTask("Simple Delete");
+    @Test(description = "Delete all tasks sequentially")
+    public void testDeleteAllTasks() throws InterruptedException {
+        String title1 = addTask("Delete All 1");
+        String title2 = addTask("Delete All 2");
+        String title3 = addTask("Delete All 3");
+        
+		// Delete all tasks one by one
+		WebElement el1 = waitForTextContains(title1);
+		swipeLeft(el1);
+		Thread.sleep(200);
+		
+		WebElement el2 = waitForTextContains(title2);
+		swipeLeft(el2);
+		Thread.sleep(200);
+		
+		WebElement el3 = waitForTextContains(title3);
+		swipeLeft(el3);
+		Thread.sleep(200);        // Verify all deleted
+        Assert.assertFalse(driver.getPageSource().contains(title1));
+        Assert.assertFalse(driver.getPageSource().contains(title2));
+        Assert.assertFalse(driver.getPageSource().contains(title3));
+    }
+
+    @Test(description = "Delete task with numbers and special chars")
+    public void testDeleteTaskWithSpecialContent() throws InterruptedException {
+        String title = addTask("Task #123-456");
         WebElement el = waitForTextContains(title);
         swipeLeft(el);
-        Thread.sleep(300);
-        Assert.assertFalse(driver.getPageSource().contains(title));
+        Thread.sleep(200);
+        Assert.assertFalse(driver.getPageSource().contains("#123-456"));
     }
 
 }

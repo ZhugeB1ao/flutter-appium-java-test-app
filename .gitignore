@@ -1,0 +1,31 @@
+# Logs
+*.log
+nohup.out
+
+# OS
+.DS_Store
+*.swp
+*.swo
+
+# Build artifacts
+test-app/build/
+appium-tests/target/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Temporary files
+window_dump.xml
+*.tmp
+
+# Flutter
+test-app/.dart_tool/
+test-app/.flutter-plugins
+test-app/.flutter-plugins-dependencies
+test-app/.packages
+test-app/pubspec.lock
+
+# Maven
+appium-tests/dependency-reduced-pom.xml

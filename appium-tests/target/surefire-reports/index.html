@@ -128,22 +128,22 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Appium_Test_Suite" title="com.example.tests.DeleteTaskSuite" class="method navigator-link" hash-for-method="testDeleteAfterCreation">testDeleteAfterCreation</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Appium_Test_Suite" title="com.example.tests.DeleteTaskSuite" class="method navigator-link" hash-for-method="testDeleteAllTasks">testDeleteAllTasks</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Appium_Test_Suite" title="com.example.tests.DeleteTaskSuite" class="method navigator-link" hash-for-method="testDeleteFirstTask">testDeleteFirstTask</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Appium_Test_Suite" title="com.example.tests.DeleteTaskSuite" class="method navigator-link" hash-for-method="testDeleteMiddleTask">testDeleteMiddleTask</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Appium_Test_Suite" title="com.example.tests.DeleteTaskSuite" class="method navigator-link" hash-for-method="testDeleteMultipleTasks">testDeleteMultipleTasks</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Appium_Test_Suite" title="com.example.tests.DeleteTaskSuite" class="method navigator-link" hash-for-method="testDeleteOldestTask">testDeleteOldestTask</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Appium_Test_Suite" title="com.example.tests.DeleteTaskSuite" class="method navigator-link" hash-for-method="testDeleteSimpleTask">testDeleteSimpleTask</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Appium_Test_Suite" title="com.example.tests.DeleteTaskSuite" class="method navigator-link" hash-for-method="testDeleteTaskWithSpecialContent">testDeleteTaskWithSpecialContent</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -302,38 +302,38 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testDeleteAfterCreation">
-                  </a> <!-- testDeleteAfterCreation -->
-                  <span class="method-name">testDeleteAfterCreation</span>
+                  <a name="testDeleteAllTasks">
+                  </a> <!-- testDeleteAllTasks -->
+                  <span class="method-name">testDeleteAllTasks</span>
                   <em>
-(Delete task immediately after creation)                  </em>
+(Delete all tasks sequentially)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testDeleteFirstTask">
-                  </a> <!-- testDeleteFirstTask -->
-                  <span class="method-name">testDeleteFirstTask</span>
+                  <a name="testDeleteMiddleTask">
+                  </a> <!-- testDeleteMiddleTask -->
+                  <span class="method-name">testDeleteMiddleTask</span>
                   <em>
-(Delete first task in list)                  </em>
+(Delete middle task when three exist)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testDeleteMultipleTasks">
-                  </a> <!-- testDeleteMultipleTasks -->
-                  <span class="method-name">testDeleteMultipleTasks</span>
+                  <a name="testDeleteOldestTask">
+                  </a> <!-- testDeleteOldestTask -->
+                  <span class="method-name">testDeleteOldestTask</span>
                   <em>
-(Delete multiple tasks)                  </em>
+(Delete oldest task when multiple exist)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testDeleteSimpleTask">
-                  </a> <!-- testDeleteSimpleTask -->
-                  <span class="method-name">testDeleteSimpleTask</span>
+                  <a name="testDeleteTaskWithSpecialContent">
+                  </a> <!-- testDeleteTaskWithSpecialContent -->
+                  <span class="method-name">testDeleteTaskWithSpecialContent</span>
                   <em>
-(Delete task with simple title)                  </em>
+(Delete task with numbers and special chars)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -420,70 +420,70 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(15);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testDeleteMultipleTasks')
+data.setCell(0, 1, 'testDeleteAllTasks')
 data.setCell(0, 2, 'com.example.tests.DeleteTaskSuite')
-data.setCell(0, 3, 45571);
+data.setCell(0, 3, 70775);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testUpdateMultipleTimes')
-data.setCell(1, 2, 'com.example.tests.UpdateTaskSuite')
-data.setCell(1, 3, 43261);
+data.setCell(1, 1, 'testDeleteOldestTask')
+data.setCell(1, 2, 'com.example.tests.DeleteTaskSuite')
+data.setCell(1, 3, 62856);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testUpdateSimpleTask')
-data.setCell(2, 2, 'com.example.tests.UpdateTaskSuite')
-data.setCell(2, 3, 37317);
+data.setCell(2, 1, 'testDeleteMiddleTask')
+data.setCell(2, 2, 'com.example.tests.DeleteTaskSuite')
+data.setCell(2, 3, 51983);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testUpdateWithNumbers')
+data.setCell(3, 1, 'testUpdateMultipleTimes')
 data.setCell(3, 2, 'com.example.tests.UpdateTaskSuite')
-data.setCell(3, 3, 37175);
+data.setCell(3, 3, 42484);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testUpdateToVietnamese')
+data.setCell(4, 1, 'testUpdateToLongerText')
 data.setCell(4, 2, 'com.example.tests.UpdateTaskSuite')
-data.setCell(4, 3, 34057);
+data.setCell(4, 3, 34731);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testDeleteVietnameseTask')
-data.setCell(5, 2, 'com.example.tests.DeleteTaskSuite')
-data.setCell(5, 3, 27746);
+data.setCell(5, 1, 'testUpdateSimpleTask')
+data.setCell(5, 2, 'com.example.tests.UpdateTaskSuite')
+data.setCell(5, 3, 34475);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testUpdateToLongerText')
+data.setCell(6, 1, 'testUpdateToVietnamese')
 data.setCell(6, 2, 'com.example.tests.UpdateTaskSuite')
-data.setCell(6, 3, 24432);
+data.setCell(6, 3, 33584);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testCreateEmptyTask')
-data.setCell(7, 2, 'com.example.tests.CreateTaskSuite')
-data.setCell(7, 3, 19664);
+data.setCell(7, 1, 'testDeleteVietnameseTask')
+data.setCell(7, 2, 'com.example.tests.DeleteTaskSuite')
+data.setCell(7, 3, 28005);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'testCreateVietnameseTask')
-data.setCell(8, 2, 'com.example.tests.CreateTaskSuite')
-data.setCell(8, 3, 19411);
+data.setCell(8, 1, 'testDeleteTaskWithSpecialContent')
+data.setCell(8, 2, 'com.example.tests.DeleteTaskSuite')
+data.setCell(8, 3, 27161);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'testCreateSimpleTask')
-data.setCell(9, 2, 'com.example.tests.CreateTaskSuite')
-data.setCell(9, 3, 18933);
+data.setCell(9, 1, 'testUpdateWithNumbers')
+data.setCell(9, 2, 'com.example.tests.UpdateTaskSuite')
+data.setCell(9, 3, 23781);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'testDeleteAfterCreation')
-data.setCell(10, 2, 'com.example.tests.DeleteTaskSuite')
-data.setCell(10, 3, 18906);
+data.setCell(10, 1, 'testCreateEmptyTask')
+data.setCell(10, 2, 'com.example.tests.CreateTaskSuite')
+data.setCell(10, 3, 22032);
 data.setCell(11, 0, 11)
 data.setCell(11, 1, 'testCreateLongTask')
 data.setCell(11, 2, 'com.example.tests.CreateTaskSuite')
-data.setCell(11, 3, 18524);
+data.setCell(11, 3, 21047);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'testDeleteFirstTask')
-data.setCell(12, 2, 'com.example.tests.DeleteTaskSuite')
-data.setCell(12, 3, 17595);
+data.setCell(12, 1, 'testCreateSimpleTask')
+data.setCell(12, 2, 'com.example.tests.CreateTaskSuite')
+data.setCell(12, 3, 19613);
 data.setCell(13, 0, 13)
 data.setCell(13, 1, 'testCreateTaskWithNumbers')
 data.setCell(13, 2, 'com.example.tests.CreateTaskSuite')
-data.setCell(13, 3, 17547);
+data.setCell(13, 3, 19512);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'testDeleteSimpleTask')
-data.setCell(14, 2, 'com.example.tests.DeleteTaskSuite')
-data.setCell(14, 3, 16829);
+data.setCell(14, 1, 'testCreateVietnameseTask')
+data.setCell(14, 2, 'com.example.tests.CreateTaskSuite')
+data.setCell(14, 3, 19339);
 window.suiteTableData['Appium_Test_Suite']= { tableData: data, tableDiv: 'times-div-Appium_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 minutes</span>
+              <span class="suite-total-time">Total running time: 8 minutes</span>
               <div id="times-div-Appium_Test_Suite">
               </div> <!-- times-div-Appium_Test_Suite -->
             </div> <!-- times-div -->
@@ -516,209 +516,209 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">ensureAppReady</span>
-                <span class="method-start">21704 ms</span>
+                <span class="method-start">28822 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testCreateEmptyTask</span>
-                <span class="method-start">22260 ms</span>
+                <span class="method-start">29405 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEach([TestResult name=testCreateEmptyTask status=SUCCESS method=CreateTaskSuite.testCreateEmptyTask()[pri...)</span>
-                <span class="method-start">41925 ms</span>
+                <span class="method-start">51440 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">ensureAppReady</span>
-                <span class="method-start">42573 ms</span>
+                <span class="method-start">52808 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testCreateLongTask</span>
-                <span class="method-start">42908 ms</span>
+                <span class="method-start">53304 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEach([TestResult name=testCreateLongTask status=SUCCESS method=CreateTaskSuite.testCreateLongTask()[pri:0...)</span>
-                <span class="method-start">61432 ms</span>
+                <span class="method-start">74352 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">ensureAppReady</span>
-                <span class="method-start">62057 ms</span>
+                <span class="method-start">75678 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testCreateSimpleTask</span>
-                <span class="method-start">62391 ms</span>
+                <span class="method-start">76085 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEach([TestResult name=testCreateSimpleTask status=SUCCESS method=CreateTaskSuite.testCreateSimpleTask()[p...)</span>
-                <span class="method-start">81324 ms</span>
+                <span class="method-start">95699 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">ensureAppReady</span>
-                <span class="method-start">81973 ms</span>
+                <span class="method-start">97278 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testCreateTaskWithNumbers</span>
-                <span class="method-start">82287 ms</span>
+                <span class="method-start">97819 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEach([TestResult name=testCreateTaskWithNumbers status=SUCCESS method=CreateTaskSuite.testCreateTaskWithN...)</span>
-                <span class="method-start">99834 ms</span>
+                <span class="method-start">117331 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">ensureAppReady</span>
-                <span class="method-start">100478 ms</span>
+                <span class="method-start">118722 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testCreateVietnameseTask</span>
-                <span class="method-start">100904 ms</span>
+                <span class="method-start">119092 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEach([TestResult name=testCreateVietnameseTask status=SUCCESS method=CreateTaskSuite.testCreateVietnamese...)</span>
-                <span class="method-start">120316 ms</span>
+                <span class="method-start">138431 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">120978 ms</span>
+                <span class="method-start">139734 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.example.tests.UpdateTaskSuite</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">122327 ms</span>
+                <span class="method-start">140865 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">ensureAppReady</span>
-                <span class="method-start">135200 ms</span>
+                <span class="method-start">153919 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testUpdateMultipleTimes</span>
-                <span class="method-start">136195 ms</span>
+                <span class="method-start">154641 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEach([TestResult name=testUpdateMultipleTimes status=SUCCESS method=UpdateTaskSuite.testUpdateMultipleTim...)</span>
-                <span class="method-start">179457 ms</span>
+                <span class="method-start">197125 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">ensureAppReady</span>
-                <span class="method-start">180128 ms</span>
+                <span class="method-start">198388 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testUpdateSimpleTask</span>
-                <span class="method-start">180530 ms</span>
+                <span class="method-start">198724 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEach([TestResult name=testUpdateSimpleTask status=SUCCESS method=UpdateTaskSuite.testUpdateSimpleTask()[p...)</span>
-                <span class="method-start">217849 ms</span>
+                <span class="method-start">233200 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">ensureAppReady</span>
-                <span class="method-start">218796 ms</span>
+                <span class="method-start">234562 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testUpdateToLongerText</span>
-                <span class="method-start">219421 ms</span>
+                <span class="method-start">235311 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEach([TestResult name=testUpdateToLongerText status=SUCCESS method=UpdateTaskSuite.testUpdateToLongerText...)</span>
-                <span class="method-start">243853 ms</span>
+                <span class="method-start">270042 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">ensureAppReady</span>
-                <span class="method-start">244512 ms</span>
+                <span class="method-start">271124 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testUpdateToVietnamese</span>
-                <span class="method-start">244860 ms</span>
+                <span class="method-start">271449 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEach([TestResult name=testUpdateToVietnamese status=SUCCESS method=UpdateTaskSuite.testUpdateToVietnamese...)</span>
-                <span class="method-start">278917 ms</span>
+                <span class="method-start">305033 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">ensureAppReady</span>
-                <span class="method-start">279683 ms</span>
+                <span class="method-start">306078 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testUpdateWithNumbers</span>
-                <span class="method-start">280065 ms</span>
+                <span class="method-start">306412 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEach([TestResult name=testUpdateWithNumbers status=SUCCESS method=UpdateTaskSuite.testUpdateWithNumbers()...)</span>
-                <span class="method-start">317241 ms</span>
+                <span class="method-start">330193 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">317910 ms</span>
+                <span class="method-start">331296 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.example.tests.DeleteTaskSuite</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">318863 ms</span>
+                <span class="method-start">332208 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">ensureAppReady</span>
-                <span class="method-start">331137 ms</span>
+                <span class="method-start">341159 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testDeleteAfterCreation</span>
-                <span class="method-start">331788 ms</span>
+                <span class="method-name">testDeleteAllTasks</span>
+                <span class="method-start">341715 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterEach([TestResult name=testDeleteAfterCreation status=SUCCESS method=DeleteTaskSuite.testDeleteAfterCreati...)</span>
-                <span class="method-start">350695 ms</span>
+                <span class="method-name">afterEach([TestResult name=testDeleteAllTasks status=SUCCESS method=DeleteTaskSuite.testDeleteAllTasks()[pri:0...)</span>
+                <span class="method-start">412491 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">ensureAppReady</span>
-                <span class="method-start">351391 ms</span>
+                <span class="method-start">413805 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testDeleteFirstTask</span>
-                <span class="method-start">351729 ms</span>
+                <span class="method-name">testDeleteMiddleTask</span>
+                <span class="method-start">414242 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterEach([TestResult name=testDeleteFirstTask status=SUCCESS method=DeleteTaskSuite.testDeleteFirstTask()[pri...)</span>
-                <span class="method-start">369324 ms</span>
+                <span class="method-name">afterEach([TestResult name=testDeleteMiddleTask status=SUCCESS method=DeleteTaskSuite.testDeleteMiddleTask()[p...)</span>
+                <span class="method-start">466225 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">ensureAppReady</span>
-                <span class="method-start">369993 ms</span>
+                <span class="method-start">467738 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testDeleteMultipleTasks</span>
-                <span class="method-start">370341 ms</span>
+                <span class="method-name">testDeleteOldestTask</span>
+                <span class="method-start">468389 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterEach([TestResult name=testDeleteMultipleTasks status=SUCCESS method=DeleteTaskSuite.testDeleteMultipleTas...)</span>
-                <span class="method-start">415913 ms</span>
+                <span class="method-name">afterEach([TestResult name=testDeleteOldestTask status=SUCCESS method=DeleteTaskSuite.testDeleteOldestTask()[p...)</span>
+                <span class="method-start">531246 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">ensureAppReady</span>
-                <span class="method-start">416556 ms</span>
+                <span class="method-start">532412 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testDeleteSimpleTask</span>
-                <span class="method-start">416878 ms</span>
+                <span class="method-name">testDeleteTaskWithSpecialContent</span>
+                <span class="method-start">532776 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterEach([TestResult name=testDeleteSimpleTask status=SUCCESS method=DeleteTaskSuite.testDeleteSimpleTask()[p...)</span>
-                <span class="method-start">433708 ms</span>
+                <span class="method-name">afterEach([TestResult name=testDeleteTaskWithSpecialContent status=SUCCESS method=DeleteTaskSuite.testDeleteTa...)</span>
+                <span class="method-start">559937 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">ensureAppReady</span>
-                <span class="method-start">434341 ms</span>
+                <span class="method-start">561357 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testDeleteVietnameseTask</span>
-                <span class="method-start">434673 ms</span>
+                <span class="method-start">561770 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEach([TestResult name=testDeleteVietnameseTask status=SUCCESS method=DeleteTaskSuite.testDeleteVietnamese...)</span>
-                <span class="method-start">462419 ms</span>
+                <span class="method-start">589775 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">463075 ms</span>
+                <span class="method-start">591488 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -28,17 +28,15 @@ public class UpdateTaskSuite extends BaseTest {
     private void editTask(String originalTitle, String newTitle) throws InterruptedException {
         WebElement taskText = waitForTextContains(originalTitle);
         
-        // Double-click to enter edit mode
-        try {
-            taskText.click();
-            Thread.sleep(100);
-            taskText.click();
-            Thread.sleep(200);
-        } catch (Exception e) {
-            taskText.click();
-        }
-        
-        // Find the edit field that contains our task title
+		// Double-click to enter edit mode
+		try {
+			taskText.click();
+			Thread.sleep(100);
+			taskText.click();
+			Thread.sleep(200);
+		} catch (Exception e) {
+			taskText.click();
+		}        // Find the edit field that contains our task title
         List<WebElement> editFields = driver.findElements(By.className("android.widget.EditText"));
         WebElement edit = null;
         for (int i = editFields.size() - 1; i >= 0; i--) {

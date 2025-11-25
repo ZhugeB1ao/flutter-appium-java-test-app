@@ -4,15 +4,52 @@
   <listeners>
     <listener class-name="com.example.util.TestFailureListener"/>
   </listeners>
+  <test thread-count="5" name="CreateTaskTests(failed)" verbose="0">
+    <classes>
+      <class name="com.example.tests.CreateTaskSuite">
+        <methods>
+          <include name="testCreateSimpleTask"/>
+          <include name="testCreateTaskWithNumbers"/>
+          <include name="testCreateLongTask"/>
+          <include name="ensureAppReady"/>
+          <include name="setUp"/>
+          <include name="testCreateEmptyTask"/>
+          <include name="afterEach"/>
+          <include name="testCreateVietnameseTask"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.example.tests.CreateTaskSuite -->
+    </classes>
+  </test> <!-- CreateTaskTests(failed) -->
+  <test thread-count="5" name="UpdateTaskTests(failed)" verbose="0">
+    <classes>
+      <class name="com.example.tests.UpdateTaskSuite">
+        <methods>
+          <include name="testUpdateToLongerText"/>
+          <include name="testUpdateWithNumbers"/>
+          <include name="testUpdateToVietnamese"/>
+          <include name="ensureAppReady"/>
+          <include name="setUp"/>
+          <include name="testUpdateSimpleTask"/>
+          <include name="afterEach"/>
+          <include name="tearDown"/>
+          <include name="testUpdateMultipleTimes"/>
+        </methods>
+      </class> <!-- com.example.tests.UpdateTaskSuite -->
+    </classes>
+  </test> <!-- UpdateTaskTests(failed) -->
   <test thread-count="5" name="DeleteTaskTests(failed)" verbose="0">
     <classes>
       <class name="com.example.tests.DeleteTaskSuite">
         <methods>
-          <include name="testDeleteLongTask"/>
+          <include name="testDeleteMiddleTask"/>
           <include name="ensureAppReady"/>
           <include name="setUp"/>
-          <include name="testDeleteTaskWithNumbers"/>
+          <include name="testDeleteOldestTask"/>
+          <include name="testDeleteVietnameseTask"/>
           <include name="afterEach"/>
+          <include name="testDeleteAllTasks"/>
+          <include name="testDeleteTaskWithSpecialContent"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.example.tests.DeleteTaskSuite -->

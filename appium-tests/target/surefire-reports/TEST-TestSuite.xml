@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="464.756" tests="15" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="593.356" tests="15" errors="0" skipped="0" failures="0">
   <properties>
     <property name="appPackage" value="com.example.test_app"/>
     <property name="surefire.suiteXmlFiles" value="testng.xml"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="VN"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-24.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/target/surefire/surefirebooter-20251125120350916_3.jar /Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/target/surefire 2025-11-25T12-03-50_567-jvmRun1 surefire-20251125120350916_1tmp surefire_0-20251125120350916_2tmp"/>
+    <property name="sun.java.command" value="/Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/target/surefire/surefirebooter-20251125192541977_3.jar /Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/target/surefire 2025-11-25T19-25-41_558-jvmRun1 surefire-20251125192541977_1tmp surefire_0-20251125192541977_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/target/test-classes:/Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/target/classes:/Users/macbook/.m2/repository/io/appium/java-client/8.6.0/java-client-8.6.0.jar:/Users/macbook/.m2/repository/org/seleniumhq/selenium/selenium-api/4.13.0/selenium-api-4.13.0.jar:/Users/macbook/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.13.0/selenium-remote-driver-4.13.0.jar:/Users/macbook/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/macbook/.m2/repository/com/google/guava/guava/32.1.2-jre/guava-32.1.2-jre.jar:/Users/macbook/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/macbook/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/macbook/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/macbook/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar:/Users/macbook/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar:/Users/macbook/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/Users/macbook/.m2/repository/io/netty/netty-buffer/4.1.96.Final/netty-buffer-4.1.96.Final.jar:/Users/macbook/.m2/repository/io/netty/netty-codec-http/4.1.96.Final/netty-codec-http-4.1.96.Final.jar:/Users/macbook/.m2/repository/io/netty/netty-codec/4.1.96.Final/netty-codec-4.1.96.Final.jar:/Users/macbook/.m2/repository/io/netty/netty-handler/4.1.96.Final/netty-handler-4.1.96.Final.jar:/Users/macbook/.m2/repository/io/netty/netty-common/4.1.96.Final/netty-common-4.1.96.Final.jar:/Users/macbook/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.96.Final/netty-transport-classes-epoll-4.1.96.Final.jar:/Users/macbook/.m2/repository/io/netty/netty-transport-classes-kqueue/4.1.96.Final/netty-transport-classes-kqueue-4.1.96.Final.jar:/Users/macbook/.m2/repository/io/netty/netty-transport-native-epoll/4.1.96.Final/netty-transport-native-epoll-4.1.96.Final.jar:/Users/macbook/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.96.Final/netty-transport-native-kqueue-4.1.96.Final.jar:/Users/macbook/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.96.Final/netty-transport-native-unix-common-4.1.96.Final.jar:/Users/macbook/.m2/repository/io/netty/netty-transport/4.1.96.Final/netty-transport-4.1.96.Final.jar:/Users/macbook/.m2/repository/io/netty/netty-resolver/4.1.96.Final/netty-resolver-4.1.96.Final.jar:/Users/macbook/.m2/repository/io/opentelemetry/opentelemetry-api/1.28.0/opentelemetry-api-1.28.0.jar:/Users/macbook/.m2/repository/io/opentelemetry/opentelemetry-context/1.28.0/opentelemetry-context-1.28.0.jar:/Users/macbook/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.28.0/opentelemetry-exporter-logging-1.28.0.jar:/Users/macbook/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.28.0/opentelemetry-sdk-metrics-1.28.0.jar:/Users/macbook/.m2/repository/io/opentelemetry/opentelemetry-extension-incubator/1.28.0-alpha/opentelemetry-extension-incubator-1.28.0-alpha.jar:/Users/macbook/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.28.0/opentelemetry-sdk-logs-1.28.0.jar:/Users/macbook/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.28.0/opentelemetry-sdk-common-1.28.0.jar:/Users/macbook/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.28.0/opentelemetry-sdk-extension-autoconfigure-spi-1.28.0.jar:/Users/macbook/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.28.0/opentelemetry-sdk-extension-autoconfigure-1.28.0.jar:/Users/macbook/.m2/repository/io/opentelemetry/opentelemetry-api-events/1.28.0-alpha/opentelemetry-api-events-1.28.0-alpha.jar:/Users/macbook/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.28.0/opentelemetry-sdk-trace-1.28.0.jar:/Users/macbook/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.28.0/opentelemetry-sdk-1.28.0.jar:/Users/macbook/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha.jar:/Users/macbook/.m2/repository/net/bytebuddy/byte-buddy/1.14.5/byte-buddy-1.14.5.jar:/Users/macbook/.m2/repository/org/asynchttpclient/async-http-client/2.12.3/async-http-client-2.12.3.jar:/Users/macbook/.m2/repository/org/asynchttpclient/async-http-client-netty-utils/2.12.3/async-http-client-netty-utils-2.12.3.jar:/Users/macbook/.m2/repository/io/netty/netty-codec-socks/4.1.60.Final/netty-codec-socks-4.1.60.Final.jar:/Users/macbook/.m2/repository/io/netty/netty-handler-proxy/4.1.60.Final/netty-handler-proxy-4.1.60.Final.jar:/Users/macbook/.m2/repository/io/netty/netty-transport-native-epoll/4.1.60.Final/netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar:/Users/macbook/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.60.Final/netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar:/Users/macbook/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/Users/macbook/.m2/repository/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar:/Users/macbook/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/Users/macbook/.m2/repository/org/seleniumhq/selenium/selenium-http/4.13.0/selenium-http-4.13.0.jar:/Users/macbook/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/macbook/.m2/repository/org/seleniumhq/selenium/selenium-json/4.13.0/selenium-json-4.13.0.jar:/Users/macbook/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.13.0/selenium-manager-4.13.0.jar:/Users/macbook/.m2/repository/org/seleniumhq/selenium/selenium-os/4.13.0/selenium-os-4.13.0.jar:/Users/macbook/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/macbook/.m2/repository/org/seleniumhq/selenium/selenium-support/4.13.0/selenium-support-4.13.0.jar:/Users/macbook/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/macbook/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/macbook/.m2/repository/commons-io/commons-io/2.14.0/commons-io-2.14.0.jar:/Users/macbook/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/macbook/.m2/repository/org/testng/testng/7.7.0/testng-7.7.0.jar:/Users/macbook/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/macbook/.m2/repository/org/webjars/jquery/3.6.1/jquery-3.6.1.jar:/Users/macbook/.m2/repository/org/seleniumhq/selenium/selenium-java/4.10.0/selenium-java-4.10.0.jar:/Users/macbook/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.10.0/selenium-chrome-driver-4.10.0.jar:/Users/macbook/.m2/repository/com/google/auto/service/auto-service/1.0.1/auto-service-1.0.1.jar:/Users/macbook/.m2/repository/com/google/auto/auto-common/1.2/auto-common-1.2.jar:/Users/macbook/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.10.0/selenium-chromium-driver-4.10.0.jar:/Users/macbook/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v112/4.10.0/selenium-devtools-v112-4.10.0.jar:/Users/macbook/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v113/4.10.0/selenium-devtools-v113-4.10.0.jar:/Users/macbook/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v114/4.10.0/selenium-devtools-v114-4.10.0.jar:/Users/macbook/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.10.0/selenium-devtools-v85-4.10.0.jar:/Users/macbook/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.10.0/selenium-edge-driver-4.10.0.jar:/Users/macbook/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.10.0/selenium-firefox-driver-4.10.0.jar:/Users/macbook/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.10.0/selenium-ie-driver-4.10.0.jar:/Users/macbook/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.10.0/selenium-safari-driver-4.10.0.jar:"/>
@@ -36,7 +36,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/target/surefire/surefirebooter-20251125120350916_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/target/surefire/surefirebooter-20251125192541977_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="24.0.2+12-54"/>
@@ -67,80 +67,80 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="testCreateEmptyTask" classname="com.example.tests.CreateTaskSuite" time="19.665">
+  <testcase name="testCreateEmptyTask" classname="com.example.tests.CreateTaskSuite" time="22.034">
     <system-err><![CDATA[SLF4J: No SLF4J providers were found.
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
 ]]></system-err>
   </testcase>
-  <testcase name="testCreateLongTask" classname="com.example.tests.CreateTaskSuite" time="18.523">
+  <testcase name="testCreateLongTask" classname="com.example.tests.CreateTaskSuite" time="21.047">
     <system-out><![CDATA[
-✅ PASSED: com.example.tests.CreateTaskSuite.testCreateEmptyTask (19664ms)
+✅ PASSED: com.example.tests.CreateTaskSuite.testCreateEmptyTask (22032ms)
 ]]></system-out>
   </testcase>
-  <testcase name="testCreateSimpleTask" classname="com.example.tests.CreateTaskSuite" time="18.932">
+  <testcase name="testCreateSimpleTask" classname="com.example.tests.CreateTaskSuite" time="19.614">
     <system-out><![CDATA[
-✅ PASSED: com.example.tests.CreateTaskSuite.testCreateLongTask (18524ms)
+✅ PASSED: com.example.tests.CreateTaskSuite.testCreateLongTask (21047ms)
 ]]></system-out>
   </testcase>
-  <testcase name="testCreateTaskWithNumbers" classname="com.example.tests.CreateTaskSuite" time="17.546">
+  <testcase name="testCreateTaskWithNumbers" classname="com.example.tests.CreateTaskSuite" time="19.511">
     <system-out><![CDATA[
-✅ PASSED: com.example.tests.CreateTaskSuite.testCreateSimpleTask (18933ms)
+✅ PASSED: com.example.tests.CreateTaskSuite.testCreateSimpleTask (19613ms)
 ]]></system-out>
   </testcase>
-  <testcase name="testCreateVietnameseTask" classname="com.example.tests.CreateTaskSuite" time="19.411">
+  <testcase name="testCreateVietnameseTask" classname="com.example.tests.CreateTaskSuite" time="19.34">
     <system-out><![CDATA[
-✅ PASSED: com.example.tests.CreateTaskSuite.testCreateTaskWithNumbers (17547ms)
+✅ PASSED: com.example.tests.CreateTaskSuite.testCreateTaskWithNumbers (19512ms)
 ]]></system-out>
   </testcase>
-  <testcase name="testUpdateMultipleTimes" classname="com.example.tests.UpdateTaskSuite" time="43.261">
+  <testcase name="testUpdateMultipleTimes" classname="com.example.tests.UpdateTaskSuite" time="42.484">
     <system-out><![CDATA[
-✅ PASSED: com.example.tests.CreateTaskSuite.testCreateVietnameseTask (19411ms)
+✅ PASSED: com.example.tests.CreateTaskSuite.testCreateVietnameseTask (19339ms)
 ]]></system-out>
   </testcase>
-  <testcase name="testUpdateSimpleTask" classname="com.example.tests.UpdateTaskSuite" time="37.317">
+  <testcase name="testUpdateSimpleTask" classname="com.example.tests.UpdateTaskSuite" time="34.475">
     <system-out><![CDATA[
-✅ PASSED: com.example.tests.UpdateTaskSuite.testUpdateMultipleTimes (43261ms)
+✅ PASSED: com.example.tests.UpdateTaskSuite.testUpdateMultipleTimes (42484ms)
 ]]></system-out>
   </testcase>
-  <testcase name="testUpdateToLongerText" classname="com.example.tests.UpdateTaskSuite" time="24.431">
+  <testcase name="testUpdateToLongerText" classname="com.example.tests.UpdateTaskSuite" time="34.729">
     <system-out><![CDATA[
-✅ PASSED: com.example.tests.UpdateTaskSuite.testUpdateSimpleTask (37317ms)
+✅ PASSED: com.example.tests.UpdateTaskSuite.testUpdateSimpleTask (34475ms)
 ]]></system-out>
   </testcase>
-  <testcase name="testUpdateToVietnamese" classname="com.example.tests.UpdateTaskSuite" time="34.056">
+  <testcase name="testUpdateToVietnamese" classname="com.example.tests.UpdateTaskSuite" time="33.583">
     <system-out><![CDATA[
-✅ PASSED: com.example.tests.UpdateTaskSuite.testUpdateToLongerText (24432ms)
+✅ PASSED: com.example.tests.UpdateTaskSuite.testUpdateToLongerText (34731ms)
 ]]></system-out>
   </testcase>
-  <testcase name="testUpdateWithNumbers" classname="com.example.tests.UpdateTaskSuite" time="37.175">
+  <testcase name="testUpdateWithNumbers" classname="com.example.tests.UpdateTaskSuite" time="23.781">
     <system-out><![CDATA[
-✅ PASSED: com.example.tests.UpdateTaskSuite.testUpdateToVietnamese (34057ms)
+✅ PASSED: com.example.tests.UpdateTaskSuite.testUpdateToVietnamese (33584ms)
 ]]></system-out>
   </testcase>
-  <testcase name="testDeleteAfterCreation" classname="com.example.tests.DeleteTaskSuite" time="18.908">
+  <testcase name="testDeleteAllTasks" classname="com.example.tests.DeleteTaskSuite" time="70.775">
     <system-out><![CDATA[
-✅ PASSED: com.example.tests.UpdateTaskSuite.testUpdateWithNumbers (37175ms)
+✅ PASSED: com.example.tests.UpdateTaskSuite.testUpdateWithNumbers (23781ms)
 ]]></system-out>
   </testcase>
-  <testcase name="testDeleteFirstTask" classname="com.example.tests.DeleteTaskSuite" time="17.595">
+  <testcase name="testDeleteMiddleTask" classname="com.example.tests.DeleteTaskSuite" time="51.982">
     <system-out><![CDATA[
-✅ PASSED: com.example.tests.DeleteTaskSuite.testDeleteAfterCreation (18906ms)
+✅ PASSED: com.example.tests.DeleteTaskSuite.testDeleteAllTasks (70775ms)
 ]]></system-out>
   </testcase>
-  <testcase name="testDeleteMultipleTasks" classname="com.example.tests.DeleteTaskSuite" time="45.571">
+  <testcase name="testDeleteOldestTask" classname="com.example.tests.DeleteTaskSuite" time="62.856">
     <system-out><![CDATA[
-✅ PASSED: com.example.tests.DeleteTaskSuite.testDeleteFirstTask (17595ms)
+✅ PASSED: com.example.tests.DeleteTaskSuite.testDeleteMiddleTask (51983ms)
 ]]></system-out>
   </testcase>
-  <testcase name="testDeleteSimpleTask" classname="com.example.tests.DeleteTaskSuite" time="16.829">
+  <testcase name="testDeleteTaskWithSpecialContent" classname="com.example.tests.DeleteTaskSuite" time="27.162">
     <system-out><![CDATA[
-✅ PASSED: com.example.tests.DeleteTaskSuite.testDeleteMultipleTasks (45571ms)
+✅ PASSED: com.example.tests.DeleteTaskSuite.testDeleteOldestTask (62856ms)
 ]]></system-out>
   </testcase>
-  <testcase name="testDeleteVietnameseTask" classname="com.example.tests.DeleteTaskSuite" time="27.745">
+  <testcase name="testDeleteVietnameseTask" classname="com.example.tests.DeleteTaskSuite" time="28.004">
     <system-out><![CDATA[
-✅ PASSED: com.example.tests.DeleteTaskSuite.testDeleteSimpleTask (16829ms)
+✅ PASSED: com.example.tests.DeleteTaskSuite.testDeleteTaskWithSpecialContent (27161ms)
 ]]></system-out>
   </testcase>
 </testsuite>

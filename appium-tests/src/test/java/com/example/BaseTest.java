@@ -67,10 +67,10 @@ public abstract class BaseTest {
 		// Appium server URL can be customized with -DappiumServer
 		String appiumServer = System.getProperty("appiumServer", "http://127.0.0.1:4723");
 		driver = new AndroidDriver(new URL(appiumServer), options);
-		// Default wait: configurable via -DwaitSeconds (seconds). Default 10s.
-		long waitSeconds = 10;
+		// Default wait: configurable via -DwaitSeconds (seconds). Default 6s.
+		long waitSeconds = 6;
 		try {
-			String ws = System.getProperty("waitSeconds", "10");
+			String ws = System.getProperty("waitSeconds", "6");
 			waitSeconds = Long.parseLong(ws);
 		} catch (Exception ignored) {}
 		wait = new WebDriverWait(driver, Duration.ofSeconds(waitSeconds));
@@ -143,29 +143,8 @@ public abstract class BaseTest {
 				break;
 		}
 		
-		// Only attempt to cancel if a dialog appears to still be open (EditText present).
-		boolean dialogOpen = false;
-		try {
-			dialogOpen = driver.findElements(MobileBy.className("android.widget.EditText")).size() > 0;
-		} catch (Exception ignored) {}
-		if (dialogOpen) {
-			try {
-				WebElement cancel = null;
-				try { cancel = driver.findElement(AppiumBy.accessibilityId("cancel_task_button")); } catch (Exception ignored) {}
-				if (cancel == null) {
-					try { cancel = driver.findElement(AppiumBy.accessibilityId("Huỷ")); } catch (Exception ignored) {}
-				}
-				if (cancel == null) {
-					try { cancel = driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\"Huỷ\")")); } catch (Exception ignored) {}
-				}
-				if (cancel != null) {
-					try { cancel.click(); } catch (Exception ignored) {}
-				}
-			} catch (Exception ignored) {}
-			try { Thread.sleep(200); } catch (InterruptedException ignored) {}
-		}
-		// Ensure we're on Tasks tab
-		try { gotoTasksTab(); } catch (Exception ignored) {}
+		// App has no dialogs, just ensure keyboard is hidden
+		try { hideKeyboardSafe(); } catch (Exception ignored) {}
 
 		// Quick sanity check: if the Tasks add button isn't visible, the app may have navigated away or crashed.
 		// Relaunch the app as a recovery step so subsequent tests start from a known state.
@@ -212,27 +191,18 @@ public abstract class BaseTest {
 		}
 	}
 
-	// Helper: wait and find by accessibility id
 	protected WebElement waitForAccessibilityId(String id) {
 		return wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId(id)));
 	}
 
-	// Helper: wait and find by id (resource-id)
-
-
-	// Helper: wait and find the first EditText on screen (useful when accessibility ids are missing)
 	protected WebElement waitForFirstEditText() {
 		return wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.className("android.widget.EditText")));
 	}
 
-
-
-	// Helper: tap using element
 	protected void tap(WebElement el) {
 		el.click();
 	}
 
-	// Helper: hide keyboard if visible (safe)
 	protected void hideKeyboardSafe() {
 		try {
 			if (driver != null) {
@@ -242,9 +212,9 @@ public abstract class BaseTest {
 		}
 	}
 
-
-
-	// Helper: wait for text contains (substring match)
+	/**
+	 * Wait for text contains (substring match) using multiple strategies
+	 */
 	protected WebElement waitForTextContains(String text) {
 		// Try multiple strategies: textContains, descriptionContains (content-desc), and xpath checking both text and content-desc
 		try {
@@ -262,15 +232,8 @@ public abstract class BaseTest {
 		}
 	}
 
-
-
-
-
-
-
 	/**
-	 * Try to simulate keyboard input into an element. Prefer using the driver's keyboard if available
-	 * otherwise fall back to element.sendKeys(). This focuses the element first.
+	 * Simulate keyboard input into an element with fallback strategies
 	 */
 	protected void typeUsingKeyboard(WebElement el, String text) {
 		try {
@@ -304,60 +267,9 @@ public abstract class BaseTest {
 		}
 	}
 
-
-
-	// Helper: switch bottom tab by its label using multiple strategies (accessibility id, description, text)
-	protected void gotoTabByText(String label) {
-		// Try accessibility id (content-desc)
-		try {
-			WebElement tab = driver.findElement(MobileBy.AccessibilityId(label));
-			tab.click();
-			Thread.sleep(200);
-			return;
-		} catch (Exception ignored) {}
-		// Try descriptionContains
-		try {
-			WebElement tab = driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().descriptionContains(\"" + label + "\")"));
-			tab.click();
-			Thread.sleep(200);
-			return;
-		} catch (Exception ignored) {}
-		// Try visible text
-		try {
-			WebElement tab = driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\"" + label + "\")"));
-			tab.click();
-			Thread.sleep(200);
-			return;
-		} catch (Exception ignored) {}
-		try {
-			WebElement tab = driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().textContains(\"" + label + "\")"));
-			tab.click();
-			Thread.sleep(200);
-		} catch (Exception ignored) {}
+	protected void gotoTasksTab() {
+		// App only has Tasks page, method kept for consistency with afterEach
 	}
-
-	protected void gotoTasksTab() { gotoTabByText("Tasks"); }
-
-
-    
-	// Helper: perform a long press on an element (Android)
-	protected void longPress(org.openqa.selenium.WebElement el) {
-		try {
-			if (el instanceof RemoteWebElement) {
-				String id = ((RemoteWebElement) el).getId();
-				Map<String, Object> args = new HashMap<>();
-				args.put("elementId", id);
-				args.put("duration", 1000); // ms
-				driver.executeScript("mobile: longClickGesture", args);
-				return;
-			}
-			// Fallback: try click as a degrade
-			el.click();
-		} catch (Exception ignored) {
-			try { el.click(); } catch (Exception ignored2) {}
-		}
-	}
-
 
 	protected void swipeLeft(org.openqa.selenium.WebElement el) {
 		try {
@@ -375,30 +287,6 @@ public abstract class BaseTest {
 				el.findElement(AppiumBy.accessibilityId("delete_task_button")).click();
 				return;
 			} catch (Exception ignored) {}
-		} catch (Exception ignored) {}
-	}
-
-	/**
-	 * If the device has navigated away from the app (launcher or other package shown),
-	 * activate the app package and wait for the main UI add button. This helps tests
-	 * that accidentally send a back navigation which can leave the app backgrounded.
-	 */
-	protected void ensureAppForegrounded() {
-		try {
-			if (driver == null) return;
-			String current = null;
-			try {
-				current = driver.getCurrentPackage();
-			} catch (Exception ignored) {}
-			if (current == null || !current.equals("com.example.test_app")) {
-				try {
-					driver.activateApp("com.example.test_app");
-				} catch (Exception ignored) {
-					try { driver.launchApp(); } catch (Exception ignored2) {}
-				}
-				try { Thread.sleep(300); } catch (InterruptedException ignored) {}
-				try { waitForAccessibilityId("add_task_button"); } catch (Exception ignored) {}
-			}
 		} catch (Exception ignored) {}
 	}
 

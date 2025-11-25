@@ -1,11 +1,5 @@
-com/example/AppiumTest.class
-com/example/util/TestFailureListener.class
-com/example/tests/AddTaskInlineSuite.class
-com/example/pages/HomePage.class
-com/example/util/LoggingListener.class
-com/example/tests/EditDeleteInlineSuite.class
 com/example/BaseTest.class
+com/example/util/TestFailureListener.class
 com/example/tests/CreateTaskSuite.class
-com/example/tests/ToggleDoneSuite.class
 com/example/tests/DeleteTaskSuite.class
 com/example/tests/UpdateTaskSuite.class
