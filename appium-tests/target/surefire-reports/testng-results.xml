@@ -1,53 +1,330 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="15" passed="15" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-06T21:41:54 GMT+07:00" name="Surefire suite" finished-at="2025-11-06T21:44:22 GMT+07:00" duration-ms="147974">
+  <suite started-at="2025-11-25T12:03:51 GMT+07:00" name="Appium Test Suite" finished-at="2025-11-25T12:11:35 GMT+07:00" duration-ms="464021">
     <groups>
     </groups>
-    <test started-at="2025-11-06T21:41:54 GMT+07:00" name="Surefire test" finished-at="2025-11-06T21:44:22 GMT+07:00" duration-ms="147974">
-      <class name="com.example.tests.TaskFlowTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.example.tests.TaskFlowTest@214b199c]" started-at="2025-11-06T21:41:54 GMT+07:00" name="setUp" finished-at="2025-11-06T21:42:21 GMT+07:00" duration-ms="26440" status="PASS">
+    <test started-at="2025-11-25T12:03:51 GMT+07:00" name="CreateTaskTests" finished-at="2025-11-25T12:05:54 GMT+07:00" duration-ms="122285">
+      <class name="com.example.tests.CreateTaskSuite">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111]" started-at="2025-11-25T12:03:51 GMT+07:00" name="setUp" finished-at="2025-11-25T12:04:13 GMT+07:00" duration-ms="21682" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="beforeEach()[pri:0, instance:com.example.tests.TaskFlowTest@214b199c]" started-at="2025-11-06T21:42:21 GMT+07:00" name="beforeEach" finished-at="2025-11-06T21:42:21 GMT+07:00" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="ensureAppReady()[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111]" started-at="2025-11-25T12:04:13 GMT+07:00" name="ensureAppReady" finished-at="2025-11-25T12:04:14 GMT+07:00" duration-ms="555" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeEach -->
-        <test-method signature="testAddTaskMissingTitleShowsValidation()[pri:0, instance:com.example.tests.TaskFlowTest@214b199c]" started-at="2025-11-06T21:42:21 GMT+07:00" name="testAddTaskMissingTitleShowsValidation" description="Attempt to add task missing title, expect validation keeps dialog open" finished-at="2025-11-06T21:42:25 GMT+07:00" duration-ms="4235" status="PASS">
+        </test-method> <!-- ensureAppReady -->
+        <test-method signature="testCreateEmptyTask()[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111]" started-at="2025-11-25T12:04:14 GMT+07:00" name="testCreateEmptyTask" description="Create task with empty title" finished-at="2025-11-25T12:04:33 GMT+07:00" duration-ms="19664" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAddTaskMissingTitleShowsValidation -->
-        <test-method signature="testAddTaskWithFullInfo()[pri:0, instance:com.example.tests.TaskFlowTest@214b199c]" started-at="2025-11-06T21:42:25 GMT+07:00" name="testAddTaskWithFullInfo" description="Add task with full title and description, then save" finished-at="2025-11-06T21:43:19 GMT+07:00" duration-ms="54598" status="PASS">
+        </test-method> <!-- testCreateEmptyTask -->
+        <test-method is-config="true" signature="afterEach(org.testng.ITestResult)[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111]" started-at="2025-11-25T12:04:33 GMT+07:00" name="afterEach" finished-at="2025-11-25T12:04:34 GMT+07:00" duration-ms="647" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreateEmptyTask status=SUCCESS method=CreateTaskSuite.testCreateEmptyTask()[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAddTaskWithFullInfo -->
-        <test-method is-config="true" signature="beforeEach()[pri:0, instance:com.example.tests.TaskFlowTest@214b199c]" started-at="2025-11-06T21:42:25 GMT+07:00" name="beforeEach" finished-at="2025-11-06T21:42:25 GMT+07:00" duration-ms="0" status="PASS">
+        </test-method> <!-- afterEach -->
+        <test-method is-config="true" signature="ensureAppReady()[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111]" started-at="2025-11-25T12:04:34 GMT+07:00" name="ensureAppReady" finished-at="2025-11-25T12:04:34 GMT+07:00" duration-ms="335" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeEach -->
-        <test-method is-config="true" signature="beforeEach()[pri:0, instance:com.example.tests.TaskFlowTest@214b199c]" started-at="2025-11-06T21:43:19 GMT+07:00" name="beforeEach" finished-at="2025-11-06T21:43:19 GMT+07:00" duration-ms="1" status="PASS">
+        </test-method> <!-- ensureAppReady -->
+        <test-method signature="testCreateLongTask()[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111]" started-at="2025-11-25T12:04:34 GMT+07:00" name="testCreateLongTask" description="Create task with long title" finished-at="2025-11-25T12:04:53 GMT+07:00" duration-ms="18524" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeEach -->
-        <test-method signature="testClearAllTasksInSettings()[pri:0, instance:com.example.tests.TaskFlowTest@214b199c]" started-at="2025-11-06T21:43:19 GMT+07:00" name="testClearAllTasksInSettings" description="Clear all tasks from Settings with confirmation" finished-at="2025-11-06T21:44:07 GMT+07:00" duration-ms="47947" status="PASS">
+        </test-method> <!-- testCreateLongTask -->
+        <test-method is-config="true" signature="afterEach(org.testng.ITestResult)[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111]" started-at="2025-11-25T12:04:53 GMT+07:00" name="afterEach" finished-at="2025-11-25T12:04:53 GMT+07:00" duration-ms="625" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreateLongTask status=SUCCESS method=CreateTaskSuite.testCreateLongTask()[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testClearAllTasksInSettings -->
-        <test-method signature="testViewAllTasksFromHome()[pri:0, instance:com.example.tests.TaskFlowTest@214b199c]" started-at="2025-11-06T21:44:07 GMT+07:00" name="testViewAllTasksFromHome" description="From Home, tap &#039;Xem tất cả công việc&#039; to view full list" finished-at="2025-11-06T21:44:20 GMT+07:00" duration-ms="12110" status="PASS">
+        </test-method> <!-- afterEach -->
+        <test-method is-config="true" signature="ensureAppReady()[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111]" started-at="2025-11-25T12:04:53 GMT+07:00" name="ensureAppReady" finished-at="2025-11-25T12:04:54 GMT+07:00" duration-ms="334" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testViewAllTasksFromHome -->
-        <test-method is-config="true" signature="beforeEach()[pri:0, instance:com.example.tests.TaskFlowTest@214b199c]" started-at="2025-11-06T21:44:07 GMT+07:00" name="beforeEach" finished-at="2025-11-06T21:44:07 GMT+07:00" duration-ms="0" status="PASS">
+        </test-method> <!-- ensureAppReady -->
+        <test-method signature="testCreateSimpleTask()[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111]" started-at="2025-11-25T12:04:54 GMT+07:00" name="testCreateSimpleTask" description="Create task with simple title" finished-at="2025-11-25T12:05:13 GMT+07:00" duration-ms="18933" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeEach -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.tests.TaskFlowTest@214b199c]" started-at="2025-11-06T21:44:20 GMT+07:00" name="tearDown" finished-at="2025-11-06T21:44:22 GMT+07:00" duration-ms="2598" status="PASS">
+        </test-method> <!-- testCreateSimpleTask -->
+        <test-method is-config="true" signature="afterEach(org.testng.ITestResult)[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111]" started-at="2025-11-25T12:05:13 GMT+07:00" name="afterEach" finished-at="2025-11-25T12:05:13 GMT+07:00" duration-ms="649" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreateSimpleTask status=SUCCESS method=CreateTaskSuite.testCreateSimpleTask()[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEach -->
+        <test-method is-config="true" signature="ensureAppReady()[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111]" started-at="2025-11-25T12:05:13 GMT+07:00" name="ensureAppReady" finished-at="2025-11-25T12:05:14 GMT+07:00" duration-ms="314" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ensureAppReady -->
+        <test-method signature="testCreateTaskWithNumbers()[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111]" started-at="2025-11-25T12:05:14 GMT+07:00" name="testCreateTaskWithNumbers" description="Create task with numbers" finished-at="2025-11-25T12:05:31 GMT+07:00" duration-ms="17547" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateTaskWithNumbers -->
+        <test-method is-config="true" signature="afterEach(org.testng.ITestResult)[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111]" started-at="2025-11-25T12:05:31 GMT+07:00" name="afterEach" finished-at="2025-11-25T12:05:32 GMT+07:00" duration-ms="644" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreateTaskWithNumbers status=SUCCESS method=CreateTaskSuite.testCreateTaskWithNumbers()[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEach -->
+        <test-method is-config="true" signature="ensureAppReady()[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111]" started-at="2025-11-25T12:05:32 GMT+07:00" name="ensureAppReady" finished-at="2025-11-25T12:05:32 GMT+07:00" duration-ms="426" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ensureAppReady -->
+        <test-method signature="testCreateVietnameseTask()[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111]" started-at="2025-11-25T12:05:32 GMT+07:00" name="testCreateVietnameseTask" description="Create task with Vietnamese text" finished-at="2025-11-25T12:05:52 GMT+07:00" duration-ms="19411" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateVietnameseTask -->
+        <test-method is-config="true" signature="afterEach(org.testng.ITestResult)[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111]" started-at="2025-11-25T12:05:52 GMT+07:00" name="afterEach" finished-at="2025-11-25T12:05:52 GMT+07:00" duration-ms="661" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreateVietnameseTask status=SUCCESS method=CreateTaskSuite.testCreateVietnameseTask()[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEach -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.tests.CreateTaskSuite@1f0f1111]" started-at="2025-11-25T12:05:52 GMT+07:00" name="tearDown" finished-at="2025-11-25T12:05:54 GMT+07:00" duration-ms="1272" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.TaskFlowTest -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+      </class> <!-- com.example.tests.CreateTaskSuite -->
+    </test> <!-- CreateTaskTests -->
+    <test started-at="2025-11-25T12:05:54 GMT+07:00" name="UpdateTaskTests" finished-at="2025-11-25T12:09:10 GMT+07:00" duration-ms="196525">
+      <class name="com.example.tests.UpdateTaskSuite">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2]" started-at="2025-11-25T12:05:54 GMT+07:00" name="setUp" finished-at="2025-11-25T12:06:07 GMT+07:00" duration-ms="12872" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="ensureAppReady()[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2]" started-at="2025-11-25T12:06:07 GMT+07:00" name="ensureAppReady" finished-at="2025-11-25T12:06:08 GMT+07:00" duration-ms="995" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ensureAppReady -->
+        <test-method signature="testUpdateMultipleTimes()[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2]" started-at="2025-11-25T12:06:08 GMT+07:00" name="testUpdateMultipleTimes" description="Update task multiple times" finished-at="2025-11-25T12:06:51 GMT+07:00" duration-ms="43261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateMultipleTimes -->
+        <test-method is-config="true" signature="afterEach(org.testng.ITestResult)[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2]" started-at="2025-11-25T12:06:51 GMT+07:00" name="afterEach" finished-at="2025-11-25T12:06:51 GMT+07:00" duration-ms="671" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testUpdateMultipleTimes status=SUCCESS method=UpdateTaskSuite.testUpdateMultipleTimes()[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEach -->
+        <test-method is-config="true" signature="ensureAppReady()[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2]" started-at="2025-11-25T12:06:51 GMT+07:00" name="ensureAppReady" finished-at="2025-11-25T12:06:52 GMT+07:00" duration-ms="402" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ensureAppReady -->
+        <test-method signature="testUpdateSimpleTask()[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2]" started-at="2025-11-25T12:06:52 GMT+07:00" name="testUpdateSimpleTask" description="Update task with simple text" finished-at="2025-11-25T12:07:29 GMT+07:00" duration-ms="37317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateSimpleTask -->
+        <test-method is-config="true" signature="afterEach(org.testng.ITestResult)[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2]" started-at="2025-11-25T12:07:29 GMT+07:00" name="afterEach" finished-at="2025-11-25T12:07:30 GMT+07:00" duration-ms="946" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testUpdateSimpleTask status=SUCCESS method=UpdateTaskSuite.testUpdateSimpleTask()[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEach -->
+        <test-method is-config="true" signature="ensureAppReady()[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2]" started-at="2025-11-25T12:07:30 GMT+07:00" name="ensureAppReady" finished-at="2025-11-25T12:07:31 GMT+07:00" duration-ms="625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ensureAppReady -->
+        <test-method signature="testUpdateToLongerText()[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2]" started-at="2025-11-25T12:07:31 GMT+07:00" name="testUpdateToLongerText" description="Update task to longer text" finished-at="2025-11-25T12:07:55 GMT+07:00" duration-ms="24432" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateToLongerText -->
+        <test-method is-config="true" signature="afterEach(org.testng.ITestResult)[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2]" started-at="2025-11-25T12:07:55 GMT+07:00" name="afterEach" finished-at="2025-11-25T12:07:56 GMT+07:00" duration-ms="658" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testUpdateToLongerText status=SUCCESS method=UpdateTaskSuite.testUpdateToLongerText()[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEach -->
+        <test-method is-config="true" signature="ensureAppReady()[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2]" started-at="2025-11-25T12:07:56 GMT+07:00" name="ensureAppReady" finished-at="2025-11-25T12:07:56 GMT+07:00" duration-ms="348" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ensureAppReady -->
+        <test-method signature="testUpdateToVietnamese()[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2]" started-at="2025-11-25T12:07:56 GMT+07:00" name="testUpdateToVietnamese" description="Update task to Vietnamese" finished-at="2025-11-25T12:08:30 GMT+07:00" duration-ms="34057" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateToVietnamese -->
+        <test-method is-config="true" signature="afterEach(org.testng.ITestResult)[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2]" started-at="2025-11-25T12:08:30 GMT+07:00" name="afterEach" finished-at="2025-11-25T12:08:31 GMT+07:00" duration-ms="766" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testUpdateToVietnamese status=SUCCESS method=UpdateTaskSuite.testUpdateToVietnamese()[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEach -->
+        <test-method is-config="true" signature="ensureAppReady()[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2]" started-at="2025-11-25T12:08:31 GMT+07:00" name="ensureAppReady" finished-at="2025-11-25T12:08:31 GMT+07:00" duration-ms="382" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ensureAppReady -->
+        <test-method signature="testUpdateWithNumbers()[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2]" started-at="2025-11-25T12:08:31 GMT+07:00" name="testUpdateWithNumbers" description="Update task with numbers" finished-at="2025-11-25T12:09:09 GMT+07:00" duration-ms="37175" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateWithNumbers -->
+        <test-method is-config="true" signature="afterEach(org.testng.ITestResult)[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2]" started-at="2025-11-25T12:09:09 GMT+07:00" name="afterEach" finished-at="2025-11-25T12:09:09 GMT+07:00" duration-ms="669" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testUpdateWithNumbers status=SUCCESS method=UpdateTaskSuite.testUpdateWithNumbers()[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEach -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.tests.UpdateTaskSuite@3e2e18f2]" started-at="2025-11-25T12:09:09 GMT+07:00" name="tearDown" finished-at="2025-11-25T12:09:10 GMT+07:00" duration-ms="940" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.example.tests.UpdateTaskSuite -->
+    </test> <!-- UpdateTaskTests -->
+    <test started-at="2025-11-25T12:09:10 GMT+07:00" name="DeleteTaskTests" finished-at="2025-11-25T12:11:35 GMT+07:00" duration-ms="145125">
+      <class name="com.example.tests.DeleteTaskSuite">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283]" started-at="2025-11-25T12:09:10 GMT+07:00" name="setUp" finished-at="2025-11-25T12:09:22 GMT+07:00" duration-ms="12273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="ensureAppReady()[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283]" started-at="2025-11-25T12:09:22 GMT+07:00" name="ensureAppReady" finished-at="2025-11-25T12:09:23 GMT+07:00" duration-ms="651" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ensureAppReady -->
+        <test-method signature="testDeleteAfterCreation()[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283]" started-at="2025-11-25T12:09:23 GMT+07:00" name="testDeleteAfterCreation" description="Delete task immediately after creation" finished-at="2025-11-25T12:09:42 GMT+07:00" duration-ms="18906" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteAfterCreation -->
+        <test-method is-config="true" signature="afterEach(org.testng.ITestResult)[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283]" started-at="2025-11-25T12:09:42 GMT+07:00" name="afterEach" finished-at="2025-11-25T12:09:43 GMT+07:00" duration-ms="696" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDeleteAfterCreation status=SUCCESS method=DeleteTaskSuite.testDeleteAfterCreation()[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEach -->
+        <test-method is-config="true" signature="ensureAppReady()[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283]" started-at="2025-11-25T12:09:43 GMT+07:00" name="ensureAppReady" finished-at="2025-11-25T12:09:43 GMT+07:00" duration-ms="338" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ensureAppReady -->
+        <test-method signature="testDeleteFirstTask()[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283]" started-at="2025-11-25T12:09:43 GMT+07:00" name="testDeleteFirstTask" description="Delete first task in list" finished-at="2025-11-25T12:10:01 GMT+07:00" duration-ms="17595" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteFirstTask -->
+        <test-method is-config="true" signature="afterEach(org.testng.ITestResult)[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283]" started-at="2025-11-25T12:10:01 GMT+07:00" name="afterEach" finished-at="2025-11-25T12:10:01 GMT+07:00" duration-ms="669" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDeleteFirstTask status=SUCCESS method=DeleteTaskSuite.testDeleteFirstTask()[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEach -->
+        <test-method is-config="true" signature="ensureAppReady()[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283]" started-at="2025-11-25T12:10:01 GMT+07:00" name="ensureAppReady" finished-at="2025-11-25T12:10:02 GMT+07:00" duration-ms="348" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ensureAppReady -->
+        <test-method signature="testDeleteMultipleTasks()[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283]" started-at="2025-11-25T12:10:02 GMT+07:00" name="testDeleteMultipleTasks" description="Delete multiple tasks" finished-at="2025-11-25T12:10:47 GMT+07:00" duration-ms="45571" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteMultipleTasks -->
+        <test-method is-config="true" signature="afterEach(org.testng.ITestResult)[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283]" started-at="2025-11-25T12:10:47 GMT+07:00" name="afterEach" finished-at="2025-11-25T12:10:48 GMT+07:00" duration-ms="643" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDeleteMultipleTasks status=SUCCESS method=DeleteTaskSuite.testDeleteMultipleTasks()[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEach -->
+        <test-method is-config="true" signature="ensureAppReady()[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283]" started-at="2025-11-25T12:10:48 GMT+07:00" name="ensureAppReady" finished-at="2025-11-25T12:10:48 GMT+07:00" duration-ms="322" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ensureAppReady -->
+        <test-method signature="testDeleteSimpleTask()[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283]" started-at="2025-11-25T12:10:48 GMT+07:00" name="testDeleteSimpleTask" description="Delete task with simple title" finished-at="2025-11-25T12:11:05 GMT+07:00" duration-ms="16829" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteSimpleTask -->
+        <test-method is-config="true" signature="afterEach(org.testng.ITestResult)[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283]" started-at="2025-11-25T12:11:05 GMT+07:00" name="afterEach" finished-at="2025-11-25T12:11:06 GMT+07:00" duration-ms="633" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDeleteSimpleTask status=SUCCESS method=DeleteTaskSuite.testDeleteSimpleTask()[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEach -->
+        <test-method is-config="true" signature="ensureAppReady()[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283]" started-at="2025-11-25T12:11:06 GMT+07:00" name="ensureAppReady" finished-at="2025-11-25T12:11:06 GMT+07:00" duration-ms="332" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ensureAppReady -->
+        <test-method signature="testDeleteVietnameseTask()[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283]" started-at="2025-11-25T12:11:06 GMT+07:00" name="testDeleteVietnameseTask" description="Delete task with Vietnamese title" finished-at="2025-11-25T12:11:34 GMT+07:00" duration-ms="27746" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteVietnameseTask -->
+        <test-method is-config="true" signature="afterEach(org.testng.ITestResult)[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283]" started-at="2025-11-25T12:11:34 GMT+07:00" name="afterEach" finished-at="2025-11-25T12:11:34 GMT+07:00" duration-ms="656" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDeleteVietnameseTask status=SUCCESS method=DeleteTaskSuite.testDeleteVietnameseTask()[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEach -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.tests.DeleteTaskSuite@17046283]" started-at="2025-11-25T12:11:34 GMT+07:00" name="tearDown" finished-at="2025-11-25T12:11:35 GMT+07:00" duration-ms="912" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.example.tests.DeleteTaskSuite -->
+    </test> <!-- DeleteTaskTests -->
+  </suite> <!-- Appium Test Suite -->
 </testng-results>

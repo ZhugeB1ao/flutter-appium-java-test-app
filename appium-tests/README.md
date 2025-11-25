@@ -2,33 +2,67 @@
 
 This module runs Android E2E tests for the Flutter app using Appium (UiAutomator2).
 
-## One-command runs from repo root
+## Quick one-line runs (from repo root)
 
-- Build APK and run tests (TaskFlowTest only):
-	make e2e
+- Run all suites (uses defaults):
 
-- Run tests only (assumes APK already built):
-	make e2e-test
+```bash
+./run-e2e.sh
+```
 
-Both targets auto-set ANDROID_HOME/ANDROID_SDK_ROOT to `~/Library/Android/sdk` on macOS if these env vars are not already exported.
+- Dry-run (print command, no tests):
 
-## Defaults (overridable)
+```bash
+./run-e2e.sh --dry-run
+```
 
-- Appium server: http://127.0.0.1:4723
-- Device UDID: emulator-5554
-- APK path: ../test-app/build/app/outputs/flutter-apk/app-debug.apk
+- Fast mode (assumes app already installed / warmed device):
 
-Override examples:
+```bash
+./run-e2e.sh --fast
+```
 
-	cd appium-tests && ANDROID_HOME=$HOME/Library/Android/sdk mvn -q -DappiumServer=http://127.0.0.1:4725 -Dudid=emulator-5556 test
+## Environment variables
 
-## Scope and stability
+- `JAVA_HOME` — path to a JDK (required by Maven). Example: `/Library/Java/JavaVirtualMachines/jdk-24.jdk/Contents/Home`
+- `APP_PATH` — path to the APK to install/run (optional)
+- `UDID` — device/emulator id (optional)
+- `APPIUM_SERVER` — Appium URL (default `http://127.0.0.1:4723`)
+- `APP_PACKAGE` — app package used by tests (default `com.example.test_app`)
+- `WAIT_SECONDS` — number of seconds for explicit waits (default `10`)
+- `FAST` — if `true`, run in fast mode (skip extra install steps)
 
-- The test runner is configured (Surefire includes) to execute only `com/example/tests/TaskFlowTest.java` by default to keep the suite reliable.
-- Other experimental or flaky classes are excluded by configuration.
+## Run a single test (fast iteration)
 
-## Prereqs
+```bash
+cd appium-tests
+mvn -Dtest=com.example.tests.AddTaskInlineSuite#testAddTask1 -Dsurefire.useFile=false test
+```
 
-- Java JDK 17+
-- Appium server running locally
-- Android emulator/device available and unlocked
+## Where artifacts land
+
+- Failure snapshots (page source + screenshots): `appium-tests/target/debug-snapshots/`
+
+## Troubleshooting
+
+- If Maven complains "No compiler is provided", set `JAVA_HOME` to a JDK:
+
+```bash
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-24.jdk/Contents/Home
+```
+
+- Start Appium in a separate terminal if it's not running:
+
+```bash
+npx appium --log-level info
+```
+
+- Ensure emulator/device is visible:
+
+```bash
+/Users/macbook/Library/Android/sdk/platform-tools/adb devices
+```
+
+## CI notes
+
+- Export `JAVA_HOME`, `UDID`, and `APPIUM_SERVER` in your CI environment and run `./run-e2e.sh` or `make e2e`.

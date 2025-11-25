@@ -1,11 +1,8 @@
+/Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/src/test/java/com/example/util/LoggingListener.java
 /Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/src/test/java/com/example/AppiumTest.java
-/Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/src/test/java/com/example/tests/TaskCompletionSuite.java
-/Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/src/test/java/com/example/tests/CounterTest.java
-/Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/src/test/java/com/example/tests/HomeOverviewSuite.java
+/Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/src/test/java/com/example/tests/AddTaskInlineSuite.java
+/Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/src/test/java/com/example/tests/ToggleDoneSuite.java
+/Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/src/test/java/com/example/tests/EditDeleteInlineSuite.java
+/Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/src/test/java/com/example/util/TestFailureListener.java
 /Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/src/test/java/com/example/BaseTest.java
-/Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/src/test/java/com/example/tests/TasksListSuite.java
-/Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/src/test/java/com/example/tests/TaskFlowTest.java
-/Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/src/test/java/com/example/tests/NavigationUiSuite.java
-/Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/src/test/java/com/example/tests/SettingsSuite.java
 /Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/src/test/java/com/example/pages/HomePage.java
-/Users/macbook/Documents/Code/Mobile/Flutter/Project/mobile-flutter-testing-app/appium-tests/src/test/java/com/example/tests/TaskCrudSuite.java

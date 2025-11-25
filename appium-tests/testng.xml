@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Appium Test Suite">
-    <test name="Android Task Flow Tests">
+    <listeners>
+        <listener class-name="com.example.util.TestFailureListener"/>
+    </listeners>
+    <test name="CreateTaskTests">
         <classes>
-            <!-- <class name="com.example.tests.TaskCrudSuite"/>
-            <class name="com.example.tests.TaskCompletionSuite"/>
-            <class name="com.example.tests.NavigationUiSuite"/>
-            <class name="com.example.tests.SettingsSuite"/>
-            <class name="com.example.tests.TasksListSuite"/> -->
-            <class name="com.example.tests.TaskFlowTest"/>
+            <class name="com.example.tests.CreateTaskSuite"/>
+        </classes>
+    </test>
+    <test name="UpdateTaskTests">
+        <classes>
+            <class name="com.example.tests.UpdateTaskSuite"/>
+        </classes>
+    </test>
+    <test name="DeleteTaskTests">
+        <classes>
+            <class name="com.example.tests.DeleteTaskSuite"/>
         </classes>
     </test>
 </suite>

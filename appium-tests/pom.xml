@@ -55,10 +55,10 @@
                     <!-- Print test output directly to console so listener logs ([PASS]) are visible -->
                     <useFile>false</useFile>
                     <printSummary>true</printSummary>
-                    <includes>
-                        <!-- Run only TaskFlowTest to keep suite focused -->
-                        <include>com/example/tests/TaskFlowTest.java</include>
-                    </includes>
+                    <!-- Run suites provided by testng.xml (passed via -Dsurefire.suiteXmlFiles) -->
+                    <forkCount>1</forkCount>
+                    <reuseForks>true</reuseForks>
+                    <parallel>none</parallel>
                     <!-- Default system properties so tests can run with just `mvn test` -->
                     <systemPropertyVariables>
                         <!-- APK built by Flutter (relative to this module) -->
